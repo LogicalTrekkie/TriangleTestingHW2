@@ -17,20 +17,20 @@ from Triangle import classifyTriangle
 class TestTriangles(unittest.TestCase):
     # define multiple sets of tests as functions with names that begin
 	
-	def testRightTriangle1(self): 
-		self.assertEqual(classifyTriangle(3,4,5),'Right','3,4,5 is a Right triangle')
+	#def testRightTriangle1(self): 
+	#	self.assertEqual(classifyTriangle(3,4,5),'Right','3,4,5 is a Right triangle')
 
-	def testRightTriangle2(self): 
-		self.assertEqual(classifyTriangle(5,3,4),'Right','5,3,4 is a Right triangle')
+	#def testRightTriangle2(self): 
+	#	self.assertEqual(classifyTriangle(5,3,4),'Right','5,3,4 is a Right triangle')
         
-	def testRightTriangle3(self): 
-		self.assertEqual(classifyTriangle(6,8,10),'Right','6,8,10 is a right triangle')
+	#def testRightTriangle3(self): 
+	#	self.assertEqual(classifyTriangle(6,8,10),'Right','6,8,10 is a right triangle')
 		
-	def testRightTriangle4(self): 
-		self.assertEqual(classifyTriangle(5,4,3),'Right','5,4,3 is a right triangle')
+	#def testRightTriangle4(self): 
+	#	self.assertEqual(classifyTriangle(5,4,3),'Right','5,4,3 is a right triangle')
 
-	def testRightTriangle5(self):
-		self.assertNotEqual(classifyTriangle(1,1,1),'Right','1,1,1 is NOT a right triangle')
+	#def testRightTriangle5(self):
+	#	self.assertNotEqual(classifyTriangle(1,1,1),'Right','1,1,1 is NOT a right triangle')
 		
 	#def testNotATriangle1(self):
 	#	self.assertEqual(classifyTriangle(1,10,1),'NotATriangle','1,10,1 is Not a triangle')
@@ -52,8 +52,16 @@ class TestTriangles(unittest.TestCase):
 	#	self.assertNotEqual(classifyTriangle(20,10,20),'Equilateral','20,10,20 is NOT Equilateral triangle')
 	#def testEquilateral5(self):
 	#	self.assertNotEqual(classifyTriangle(1,2,2),'Equilateral','1,2,2 is Not Equilateral triangle')
-		
-		
+	def testScalene1(self):
+		self.assertEqual(classifyTriangle(21,20,19),'Scalene','21,20,19 is a Scalene triangle')
+	def testScalene2(self):	
+		self.assertEqual(classifyTriangle(20,21,19),'Scalene','21,20,19 is a Scalene triangle')
+	def testScalene3(self):	
+		self.assertNotEqual(classifyTriangle(15,15,17),'Scalene','15,15,17 is NOT Scalene triangle')
+	def testScalene4(self):
+		self.assertNotEqual(classifyTriangle(21,21,21),'Scalene','21,21,21 is Not a Scalene triangle')	
+	def testScalene5(self):
+		self.assertNotEqual(classifyTriangle(21,15,21),'Scalene','21,15,21 is Not a Scalene triangle')		
 		
 if __name__ == '__main__':
     print('Running unit tests')
