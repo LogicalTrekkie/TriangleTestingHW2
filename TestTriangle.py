@@ -52,17 +52,27 @@ class TestTriangles(unittest.TestCase):
 	#	self.assertNotEqual(classifyTriangle(20,10,20),'Equilateral','20,10,20 is NOT Equilateral triangle')
 	#def testEquilateral5(self):
 	#	self.assertNotEqual(classifyTriangle(1,2,2),'Equilateral','1,2,2 is Not Equilateral triangle')
-	def testScalene1(self):
-		self.assertEqual(classifyTriangle(21,20,19),'Scalene','21,20,19 is a Scalene triangle')
-	def testScalene2(self):	
-		self.assertEqual(classifyTriangle(20,21,19),'Scalene','21,20,19 is a Scalene triangle')
-	def testScalene3(self):	
-		self.assertNotEqual(classifyTriangle(15,15,17),'Scalene','15,15,17 is NOT Scalene triangle')
-	def testScalene4(self):
-		self.assertNotEqual(classifyTriangle(21,21,21),'Scalene','21,21,21 is Not a Scalene triangle')	
-	def testScalene5(self):
-		self.assertNotEqual(classifyTriangle(21,15,21),'Scalene','21,15,21 is Not a Scalene triangle')		
-		
+	#def testScalene1(self):
+	#	self.assertEqual(classifyTriangle(21,20,19),'Scalene','21,20,19 is a Scalene triangle')
+	#def testScalene2(self):	
+	#	self.assertEqual(classifyTriangle(20,21,19),'Scalene','21,20,19 is a Scalene triangle')
+	#def testScalene3(self):	
+	#	self.assertNotEqual(classifyTriangle(15,15,17),'Scalene','15,15,17 is NOT Scalene triangle')
+	#def testScalene4(self):
+	#	self.assertNotEqual(classifyTriangle(21,21,21),'Scalene','21,21,21 is Not a Scalene triangle')	
+	#def testScalene5(self):
+	#	self.assertNotEqual(classifyTriangle(21,15,21),'Scalene','21,15,21 is Not a Scalene triangle')		
+	def testIsoceles1(self): 
+		self.assertEqual(classifyTriangle(10,10,6),'Isoceles','10,10,6 is a Isoceles triangle')
+	def testIsoceles2(self): 
+		self.assertEqual(classifyTriangle(6,10,10),'Isoceles','10,10,6 is a Isoceles triangle')
+	def testIsoceles3(self): 
+		self.assertEqual(classifyTriangle(10,6,10),'Isoceles','10,10,6 is a Isoceles triangle')
+	def testIsoceles4(self): 
+		self.assertNotEqual(classifyTriangle(10,6,7),'Isoceles','10,6,7 is not a Isoceles triangle')
+	def testIsoceles5(self): 
+		self.assertNotEqual(classifyTriangle(5,5,5),'Isoceles','10,6,7 is not a Isoceles triangle')
+
 if __name__ == '__main__':
     print('Running unit tests')
     unittest.main()
