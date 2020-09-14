@@ -49,7 +49,7 @@ def classifyTriangle(a,b,c):
     # now we know that we have a valid triangle 
     if a == b and b == a:
         return 'Equilateral'
-    elif ((a * 2) + (b * 2)) == (c * 2):
+    elif ((a * a) + (b * b)) == (c * c):
         return 'Right'
     elif (a != b) and  (b != c) and (a != b):
         return 'Scalene'
